@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  background-color: #f5f6f8;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  min-height: 100vh;
+  background-color: #212529;
+  color: white;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
