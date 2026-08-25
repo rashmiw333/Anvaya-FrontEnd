@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 function LeadCard({ lead }) {
+    const navigate = useNavigate();
   return (
     <div className="card h-100 shadow-sm">
       <div className="card-body">
@@ -33,6 +36,12 @@ function LeadCard({ lead }) {
             </span>
           ))}
         </div>
+
+        <button
+         className="btn btn-primary mt-2"
+         onClick={()=>navigate(`/leads/${lead._id}`)}>
+            View Details
+        </button>
 
       </div>
     </div>
