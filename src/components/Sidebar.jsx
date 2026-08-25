@@ -1,27 +1,36 @@
 import { NavLink } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({ isLeadManagement }) {
   return (
     <div className="sidebar p-3">
       <h3 className="mb-4">Anvaya CRM</h3>
 
       <div className="nav flex-column">
 
-        <NavLink to="/leads" className="nav-link">
-          Leads
+         {isLeadManagement ? (
+        <NavLink to="/" className="nav-link">
+          ← Back to Dashboard
         </NavLink>
+      ) : (
+        <>
+          <NavLink to="/leads" className="nav-link">
+            Leads
+          </NavLink>
 
-        <a href="/" className="nav-link">
-          Sales Agents
-        </a>
+          <NavLink to="/agents" className="nav-link">
+            Sales Agents
+          </NavLink>
 
-        <a href="/" className="nav-link">
-          Reports
-        </a>
+          <NavLink to="/reports" className="nav-link">
+            Reports
+          </NavLink>
 
-        <a href="/" className="nav-link">
-          Settings
-        </a>
+          <NavLink to="/settings" className="nav-link">
+            Settings
+          </NavLink>
+        </>
+      )}
+
 
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useFetch from "../hooks/useFetch";
+import { toast } from "react-toastify";
 
 function CommentSection({ leadId }) {
 
@@ -27,12 +28,12 @@ function CommentSection({ leadId }) {
   async function handleAddComment() {
 
     if (!selectedAgent) {
-      alert("Please select a sales agent.");
+      toast.success("Please select a sales agent.");
       return;
     }
 
     if (!commentText.trim()) {
-      alert("Please enter a comment.");
+      toast.warning("Please enter a comment.");
       return;
     }
 
@@ -68,7 +69,7 @@ function CommentSection({ leadId }) {
     } catch (error) {
 
       console.log("Failed to add comment", error);
-      alert("Failed to add comment.");
+      toast.error("Failed to add comment.");
 
     } finally {
 

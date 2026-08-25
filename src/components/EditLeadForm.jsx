@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 function EditLeadForm({ lead, agents, onClose }) {
 
@@ -46,11 +47,10 @@ function EditLeadForm({ lead, agents, onClose }) {
         throw new Error("Failed to update lead");
       }
 
-      alert("Lead updated successfully");
+      toast.success("Lead updated successfully");
 
       onClose();
 
-      window.location.reload();
 
     } catch (error) {
 
@@ -59,7 +59,7 @@ function EditLeadForm({ lead, agents, onClose }) {
         error
       );
 
-      alert("Failed to update lead.");
+      toast.error("Failed to update lead.");
 
     }
   }

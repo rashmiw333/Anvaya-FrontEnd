@@ -46,7 +46,7 @@ function LeadManagement() {
   return (
     <div className="dashboard-layout">
 
-      <Sidebar />
+      <Sidebar isLeadManagement={true} />
 
       <main className="main-content">
 
