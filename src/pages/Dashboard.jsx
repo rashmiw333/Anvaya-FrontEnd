@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import StatusSummary from "../components/StatusSummary";
 import LeadCard from "../components/LeadCard";
 import QuickFilters from "../components/QuickFilters";
 import useFetch from "../hooks/useFetch";
 
+
 function Dashboard() {
+
+const navigate = useNavigate();
+
   const {
     data: leads,
     loading,
@@ -18,6 +23,8 @@ function Dashboard() {
   if (error) {
     return <h4 className="p-4">Error: {error}</h4>;
   }
+
+ 
 
   return (
     <div className="dashboard-layout">
@@ -52,7 +59,9 @@ function Dashboard() {
 
         {/* Add Lead */}
         <div className="text-center mt-4">
-          <button className="btn btn-primary">
+          <button className="btn btn-primary"
+          onClick={() => navigate("/add-lead")}
+          >
             Add New Lead
           </button>
         </div>

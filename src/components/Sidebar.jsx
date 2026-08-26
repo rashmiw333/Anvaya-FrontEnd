@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-function Sidebar({ isLeadManagement }) {
+function Sidebar({ isLead }) {
   return (
     <div className="sidebar p-3">
       <h3 className="mb-4">Anvaya CRM</h3>
 
       <div className="nav flex-column">
 
-         {isLeadManagement ? (
+         {(isLead)? (
         <NavLink to="/" className="nav-link">
           ← Back to Dashboard
         </NavLink>
