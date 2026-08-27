@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-function Sidebar({ isLead }) {
+function Sidebar({ isLead,isSalesAgent}) {
   return (
     <div className="sidebar p-3">
       <h3 className="mb-4">Anvaya CRM</h3>
 
       <div className="nav flex-column">
 
-         {(isLead)? (
+         {(isLead || isSalesAgent)? (
         <NavLink to="/" className="nav-link">
           ← Back to Dashboard
         </NavLink>
@@ -17,7 +17,7 @@ function Sidebar({ isLead }) {
             Leads
           </NavLink>
 
-          <NavLink to="/agents" className="nav-link">
+          <NavLink to="/sales-agents" className="nav-link">
             Sales Agents
           </NavLink>
 

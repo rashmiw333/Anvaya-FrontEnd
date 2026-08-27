@@ -65,7 +65,7 @@ function LeadList() {
   return (
     <div className="dashboard-layout">
 
-      {/*Sidebar */}
+      {/*Sidebar  */}
       <Sidebar isLead={true} />
 
       <main className="main-content">
