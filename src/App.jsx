@@ -6,6 +6,8 @@ import SalesAgentManagement from "./pages/SalesAgentManagement";
 import AddLead from "./pages/AddLead";
 import AddSalesAgent from "./pages/AddSalesAgent";
 import Reports from "./pages/Reports";
+import LeadStatusView from "./pages/LeadStatusView";
+import SalesAgentView from "./pages/SalesAgentView";
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
       <Route path="/sales-agents" element={<SalesAgentManagement />}/>
       <Route path="/add-agent"element={<AddSalesAgent />}/>
       <Route path="/reports" element={<Reports />} />
+      <Route path="/lead-status" element={<LeadStatusView />}/>
+      <Route path="/sales-agent-view" element={<SalesAgentView />}/>
     </Routes>
   </Router> 
   );
