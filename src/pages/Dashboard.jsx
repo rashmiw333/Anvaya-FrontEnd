@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import StatusSummary from "../components/StatusSummary";
@@ -9,6 +10,8 @@ import useFetch from "../hooks/useFetch";
 function Dashboard() {
 
 const navigate = useNavigate();
+
+const [selectedStatus, setSelectedStatus] = useState("");
 
   const {
     data: leads,
@@ -24,6 +27,9 @@ const navigate = useNavigate();
     return <h4 className="p-4">Error: {error}</h4>;
   }
 
+  const filteredLeads = selectedStatus
+  ? leads.filter((lead) => lead.status === selectedStatus)
+  : leads;
  
 
   return (
@@ -41,7 +47,7 @@ const navigate = useNavigate();
 
         {/* Leads */}
         <div className="row g-4 mb-4">
-          {leads.slice(0, 3).map((lead) => (
+          {filteredLeads.slice(0, 3).map((lead) => (
             <div
               className="col-md-4"
               key={lead._id}
@@ -55,7 +61,9 @@ const navigate = useNavigate();
         <StatusSummary leads={leads} />
 
         {/* Quick Filters */}
-        <QuickFilters />
+        <QuickFilters
+        selectedStatus={selectedStatus}
+        onStatusChange={setSelectedStatus} />
 
         {/* Add Lead */}
         <div className="text-center mt-4">

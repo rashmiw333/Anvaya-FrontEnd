@@ -1,4 +1,11 @@
-function QuickFilters() {
+function QuickFilters({ selectedStatus, onStatusChange }) {
+    const statuses = [
+    "New",
+    "Contacted",
+    "Qualified",
+    "Proposal Sent",
+    "Closed"
+  ];
   return (
     <div className="card shadow-sm mt-4">
       <div className="card-body">
@@ -7,25 +14,21 @@ function QuickFilters() {
           Quick Filters
         </h5>
 
-        <button className="btn btn-outline-primary me-2">
-          New
-        </button>
+             {statuses.map((status) => (
 
-        <button className="btn btn-outline-primary me-2">
-          Contacted
-        </button>
+          <button
+            key={status}
+            className={
+              selectedStatus === status
+                ? "btn btn-primary me-2"
+                : "btn btn-outline-primary me-2"
+            }
+            onClick={() => onStatusChange(status)}
+          >
+            {status}
+          </button>
 
-        <button className="btn btn-outline-primary me-2">
-          Qualified
-        </button>
-
-        <button className="btn btn-outline-primary me-2">
-          Proposal Sent
-        </button>
-
-        <button className="btn btn-outline-primary">
-          Closed
-        </button>
+        ))}
 
       </div>
     </div>
