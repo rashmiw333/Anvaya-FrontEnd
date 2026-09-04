@@ -11,7 +11,7 @@ function LeadList() {
     data: leads,
     loading,
     error
-  } = useFetch("http://localhost:3000/api/leads");
+  } = useFetch("https://anvaya-backend-omega.vercel.app/api/leads");
 
   const [status, setStatus] = useState("");
   const [salesAgent, setSalesAgent] = useState("");

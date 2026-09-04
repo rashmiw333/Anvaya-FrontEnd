@@ -32,9 +32,9 @@ function Sidebar({ isLead,isSalesAgent}) {
             <NavLink to="/sales-agent-view" className="nav-link">Sales Agent View</NavLink>
 
 
-          <NavLink to="/settings" className="nav-link">
+          {/* <NavLink to="/settings" className="nav-link">
             Settings
-          </NavLink>
+          </NavLink> */}
         </>
       )}
 

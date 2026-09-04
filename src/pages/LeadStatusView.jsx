@@ -8,7 +8,7 @@ function LeadStatusView() {
     data: leads,
     loading,
     error
-  } = useFetch("http://localhost:3000/api/leads");
+  } = useFetch("https://anvaya-backend-omega.vercel.app/api/leads");
 
   const [agentFilter, setAgentFilter] = useState("");
   const [priorityFilter, setPriorityFilter] = useState("");

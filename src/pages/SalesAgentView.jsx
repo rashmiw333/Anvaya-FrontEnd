@@ -8,7 +8,7 @@ function SalesAgentView() {
     data: leads,
     loading,
     error
-  } = useFetch("http://localhost:3000/api/leads");
+  } = useFetch("https://anvaya-backend-omega.vercel.app/api/leads");
 
   const [statusFilter, setStatusFilter] = useState("");
   const [priorityFilter, setPriorityFilter] = useState("");

@@ -11,7 +11,7 @@ function LeadForm() {
     data: agents,
     loading
   } = useFetch(
-    "http://localhost:3000/api/agents"
+    "https://anvaya-backend-omega.vercel.app/api/agents"
   );
 
   const [name, setName] = useState("");
@@ -51,7 +51,7 @@ function LeadForm() {
     try {
 
       const response = await fetch(
-        "http://localhost:3000/api/leads",
+        "https://anvaya-backend-omega.vercel.app/api/leads",
         {
           method: "POST",
 

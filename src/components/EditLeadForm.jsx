@@ -26,7 +26,7 @@ function EditLeadForm({ lead, agents, onClose }) {
     try {
 
       const response = await fetch(
-        `http://localhost:3000/api/leads/${lead._id}`,
+        `https://anvaya-backend-omega.vercel.app/api/leads/${lead._id}`,
         {
           method: "PUT",
 

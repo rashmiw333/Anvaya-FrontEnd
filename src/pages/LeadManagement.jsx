@@ -20,7 +20,7 @@ function LeadManagement() {
     loading: leadLoading,
     error: leadError
   } = useFetch(
-    `http://localhost:3000/api/leads/${id}`
+    `https://anvaya-backend-omega.vercel.app/api/leads/${id}`
   );
 
   // Get Sales Agents
@@ -28,7 +28,7 @@ function LeadManagement() {
     data: agents,
     loading: agentsLoading
   } = useFetch(
-    "http://localhost:3000/api/agents"
+    "https://anvaya-backend-omega.vercel.app/api/agents"
   );
 
   if (leadLoading || agentsLoading) {

@@ -16,7 +16,7 @@ function AddSalesAgent() {
     try {
 
       const response = await fetch(
-        "http://localhost:3000/api/agents",
+        "https://anvaya-backend-omega.vercel.app/api/agents",
         {
           method: "POST",
 

@@ -17,7 +17,7 @@ const [selectedStatus, setSelectedStatus] = useState("");
     data: leads,
     loading,
     error
-  } = useFetch("http://localhost:3000/api/leads");
+  } = useFetch("https://anvaya-backend-omega.vercel.app/api/leads");
 
   if (loading) {
     return <h4 className="p-4">Loading dashboard...</h4>;

@@ -30,7 +30,7 @@ function Reports() {
     loading: closedLoading,
     error: closedError
   } = useFetch(
-    "http://localhost:3000/api/report/closed"
+    "https://anvaya-backend-omega.vercel.app/api/report/closed"
   );
 
   // Pipeline leads
@@ -39,7 +39,7 @@ function Reports() {
     loading: pipelineLoading,
     error: pipelineError
   } = useFetch(
-    "http://localhost:3000/api/report/pipeline"
+    "https://anvaya-backend-omega.vercel.app/api/report/pipeline"
   );
 
   // Closed by sales agent
@@ -48,7 +48,7 @@ function Reports() {
     loading: agentLoading,
     error: agentError
   } = useFetch(
-    "http://localhost:3000/api/report/closed-by-agent"
+    "https://anvaya-backend-omega.vercel.app/api/report/closed-by-agent"
   );
 
   // Status distribution
@@ -57,7 +57,7 @@ function Reports() {
     loading: statusLoading,
     error: statusError
   } = useFetch(
-    "http://localhost:3000/api/report/status-distribution"
+    "https://anvaya-backend-omega.vercel.app/api/report/status-distribution"
   );
 
   if (

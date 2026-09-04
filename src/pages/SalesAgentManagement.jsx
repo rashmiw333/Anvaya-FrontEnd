@@ -12,7 +12,7 @@ function SalesAgentManagement() {
     loading,
     error
   } = useFetch(
-    "http://localhost:3000/api/agents"
+    "https://anvaya-backend-omega.vercel.app/api/agents"
   );
 
   if (loading) {
